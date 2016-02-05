@@ -1,3 +1,7 @@
+/*
+ * @author billyfallon
+ * @version 2/5/16	
+ */
 
 public class HuffmanNode implements Comparable<HuffmanNode>
 {
@@ -7,9 +11,9 @@ public class HuffmanNode implements Comparable<HuffmanNode>
 	protected int namedCount;
 	
 	/**
-	 * character that is being stored
+	 * String that is being stored
 	 */
-	protected char namedValue;
+	protected String namedValue;
 	
 	/**
 	 * HuffmanNode to the left of this HuffmanNode
@@ -22,10 +26,10 @@ public class HuffmanNode implements Comparable<HuffmanNode>
 	protected HuffmanNode right;
 	
 	
-	public HuffmanNode (int nC, char nV)
+	public HuffmanNode (String str, int nC)
 	{
 		namedCount = nC;
-		namedValue = nV;
+		namedValue = str;
 	}
 	
 	/**
@@ -53,7 +57,7 @@ public class HuffmanNode implements Comparable<HuffmanNode>
 	 * 
 	 * @return int namedCount
 	 */
-	public char getNamedValue()
+	public String getNamedValue()
 	{
 		return namedValue;
 	}
@@ -63,7 +67,7 @@ public class HuffmanNode implements Comparable<HuffmanNode>
 	 * 
 	 * @param i new NamedValue
 	 */
-	public void setNamedValue(char c)
+	public void setNamedValue(String c)
 	{
 		namedValue = c;
 	}
@@ -108,6 +112,19 @@ public class HuffmanNode implements Comparable<HuffmanNode>
 		right = node; 
 	}
 	
+	/**
+	 * returns a String representation of the HuffmanNode to the user
+	 * 
+	 * @return String representation of the HuffmanNode
+	 */
+	public String toString()
+	{
+		String str = "";
+		str += namedValue;
+		str += " ";
+		str += namedCount;
+		return str;
+	}
 
 	
 	/**

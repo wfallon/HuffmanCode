@@ -1,15 +1,16 @@
 import java.util.Map;
 import java.util.HashMap;
 
-
+/*
+ * @author billyfallon
+ * @version 2/5/16	
+ */
 public class HuffmanRunner 
 {
 	public static void main(String[] args)
-	{
-		HuffmanNode test = new HuffmanNode(1, 't');
-		HuffmanNode test2 = new HuffmanNode(2, 'o');
-		test2.setLeft(test);
-		System.out.println("works");
-		System.out.println(test2.compareTo(test));
+	{	
+		String str = "Sally sells sea shells at the sea shore";
+		HuffmanTree tree = new HuffmanTree(str);
+		System.out.println(tree.getEncryptedString(str));
 	}
 }
